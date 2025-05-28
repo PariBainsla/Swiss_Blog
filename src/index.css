@@ -1,13 +1,64 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar{
+  /* background-color: aqua; */
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  /* justify-content: space-around; */
+  max-width: 600px;
+  border-bottom: 1px solid #023030;
+}
+
+.navbar h1{
+  color: #023030;
+}
+
+.navbar .links{
+  margin-left: auto;
+}
+
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+  font-size: 18px;
+  /* font-weight: bold; */
+  color: #026868;
+}
+
+.navbar a:hover{
+  cursor: pointer;
+  color: rgb(7, 156, 167);
+}
+
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  /* background-color: blue; */
+}
+
+/* blog previews */
+.blog-preview{
+  padding: 10px 16px;
+  margin: 20px 0;
+  background-color: palevioletred;
+  border-bottom: 1px solid #026868;
+}
+
+.blog-preview:hover{
+  box-shadow: 1px 3px 5px #0c0268;
+}
+
+.blog-preview h3{
+  font-size: 25px;
+  color: aqua;
+  margin-bottom: 8px;
 }
