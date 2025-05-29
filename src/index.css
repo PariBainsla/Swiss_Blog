@@ -62,3 +62,26 @@
   color: rgb(126, 12, 75);
   margin-bottom: 8px;
 }
+
+.blog-preview a{
+  text-decoration: none;
+}
+
+.blog-details h2{
+  font-size: 20px;
+  color: #1ff0f0;
+  margin-bottom: 10px;
+}
+
+.blog-details div{
+  margin: 20px 0;
+}
+
+/* .blog-details button{
+  background: #695ec7;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+} */
