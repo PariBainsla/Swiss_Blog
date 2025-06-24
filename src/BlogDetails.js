@@ -20,13 +20,13 @@ const BlogDetails = () => {
             {error && <div>{error}</div>}
             {blog && (
                 <article>
-                    <h2>{blog.title}</h2>
-                    <p>Written by {blog.author}</p>
+                    <h1>{blog.title}</h1>
+                    <h3>Written by {blog.author}</h3>
                     <div>{blog.body}</div>
+                    <h4>Blog Details - {id}</h4>
                     <button onClick={handleClick}>Delete</button>
                 </article>
             )}
-            <h2>Blog Details - {id}</h2>
         </div>
      );
 }
