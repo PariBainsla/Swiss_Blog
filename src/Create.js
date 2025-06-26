@@ -8,22 +8,25 @@ const [author, setAuthor] = useState('mario');
 const [isPending, setIsPending] = useState(false);
 const navigate = useNavigate();
 
+const BACKEND_URL = 'https://swissblog-backend.onrender.com'; // replace with your actual Render URL
+
 const handleSubmit = (e) => {
     e.preventDefault();
-    const blog = {title, body, author};
+    const blog = { title, body, author };
 
     setIsPending(true);
 
-    fetch('http://localhost:8000/blogs/', {
+    fetch(`${BACKEND_URL}/blogs/`, {
         method: 'POST',
-        headers:{"Content-Type": "application/json"},
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(blog)
     }).then(() => {
-        console.log('new blog added');
+        console.log('New blog added');
         setIsPending(false);
         navigate('/');
     });
-}
+};
+
 
     return ( 
         <div className="create">

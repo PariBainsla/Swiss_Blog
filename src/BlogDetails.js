@@ -2,17 +2,21 @@ import { useNavigate, useParams } from "react-router-dom";
 import useFetch from "./usefetch";
 
 const BlogDetails = () => {
-    const {id} = useParams();
-    const { data: blog, error, isPending} = useFetch('http://localhost:8000/blogs/' + id);
+    const { id } = useParams();
+
+    const BACKEND_URL = 'https://swissblog-backend.onrender.com'; // 🔁 Replace this with actual Render URL
+
+    const { data: blog, error, isPending } = useFetch(`${BACKEND_URL}/blogs/${id}`);
     const navigate = useNavigate();
 
     const handleClick = () => {
-        fetch('http://localhost:8000/blogs/' + blog.id,{
+        fetch(`${BACKEND_URL}/blogs/${blog.id}`, {
             method: 'DELETE'
         }).then(() => {
-    console.log('Blog deleted');
-    navigate('/');})
-    }
+            console.log('Blog deleted');
+            navigate('/');
+        });
+    };
     
     return ( 
         <div className="blog-details">
